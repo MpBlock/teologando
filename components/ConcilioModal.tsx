@@ -12,6 +12,15 @@ type Props = {
   onClose: () => void;
 };
 
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 export default function ConcilioModal({ concilio, onClose }: Props) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
@@ -36,14 +45,21 @@ export default function ConcilioModal({ concilio, onClose }: Props) {
 
         {/* Conteúdo */}
         <div className="p-6 space-y-2">
-          {concilio.temasAbordados.map((tema, index) => (
-            <div
-              key={index}
-              className="rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm"
-            >
-              {tema}
-            </div>
-          ))}
+          {concilio.temasAbordados.map((tema) => {
+            const temaSlug = slugify(tema);
+
+            return (
+              <Link
+                key={temaSlug}
+                href={`/concilios/${concilio.slug}/${temaSlug}`}
+                onClick={onClose}
+                className="block rounded-lg border border-zinc-700 bg-zinc-800
+                           px-4 py-3 text-sm hover:bg-zinc-700 transition"
+              >
+                {tema}
+              </Link>
+            );
+          })}
 
           <Link
             href={`/concilios/${concilio.slug}`}
