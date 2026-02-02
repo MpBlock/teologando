@@ -1,4 +1,4 @@
-import { Concilio } from "@/types/Concilio";
+
 
 export const concilios = [
   {
@@ -8,9 +8,10 @@ export const concilios = [
     ano: 325,
     temasAbordados: [
       "Divindade de Cristo",
-      "Condenação do arianismo",
+      "Combate ao Arianismo",
       "Formulação do Credo Niceno",
       "Regras disciplinares da Igreja",
+      "Data da Páscoa",   
     ],
   },
   {
@@ -21,6 +22,9 @@ export const concilios = [
     temasAbordados: [
       "Divindade do Espírito Santo",
       "Forma final do Credo Niceno-Constantinopolitano",
+      "Confirmação da condenação do arianismo",
+      "Questões disciplinares e administrativas",
+      "Unidade e ortodoxia da Igreja",
     ],
   },
   {
@@ -31,6 +35,7 @@ export const concilios = [
     temasAbordados: [
       "Maria como Theotokos (Mãe de Deus)",
       "Condenação do nestorianismo",
+      "Confirmação dos concílios anteriores",
     ],
   },
   {
@@ -41,6 +46,9 @@ export const concilios = [
     temasAbordados: [
       "Cristo verdadeiro Deus e verdadeiro homem",
       "União hipostática",
+      "Condenação do monofisismo",
+      "Confirmação dos concílios anteriores",
+      
     ],
   },
   {
@@ -50,7 +58,8 @@ export const concilios = [
     ano: 553,
     temasAbordados: [
       "Questões cristológicas",
-      "Rejeição do monofisismo",
+      "Combate ao nestorianismo",
+      "Reafirmação do Concílio de Calcedônia",
     ],
   },
   {
@@ -60,6 +69,8 @@ export const concilios = [
     ano: 680,
     temasAbordados: [
       "Cristo possui duas vontades (divina e humana)",
+      "Condenação do monotelismo",
+      "Condenações importantes",
     ],
   },
   {
@@ -68,8 +79,10 @@ export const concilios = [
     nome: "II Concílio de Niceia",
     ano: 787,
     temasAbordados: [
-      "Uso de imagens na Igreja",
+      "Veneração x adoração",
       "Condenação do iconoclasmo",
+      "Fundamento teológico das imagens",
+      "Restabelecimento do culto aos ícones",
     ],
   },
 ];

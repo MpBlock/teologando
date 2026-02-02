@@ -1,86 +1,53 @@
 import { concilios } from "@/data/concilios";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 type Props = {
   params: { slug: string };
-  searchParams: { secao?: string };
 };
 
-export default function ConcilioPage({
-  params,
-  searchParams,
-}: Props) {
-  const { slug } = params;
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
 
-  const concilio = concilios.find((c) => c.slug === slug);
+export default function ConcilioPage({ params }: Props) {
+  const concilio = concilios.find(c => c.slug === params.slug);
   if (!concilio) notFound();
 
-  const secoes: Record<string, { titulo: string; conteudo: string }> = {
-    natureza: {
-      titulo: "Natureza de Cristo",
-      conteudo:
-        "O Concílio de Niceia afirmou que Cristo é verdadeiramente Deus, consubstancial ao Pai (homoousios).",
-    },
-    arianismo: {
-      titulo: "Condenação do Arianismo",
-      conteudo:
-        "O arianismo foi condenado por negar a plena divindade do Filho, afirmando que Ele era criado.",
-    },
-    credo: {
-      titulo: "Criação do Credo Niceno",
-      conteudo:
-        "O Credo Niceno foi formulado para proteger a fé apostólica contra heresias cristológicas.",
-    },
-    data: {
-      titulo: "Data da Páscoa",
-      conteudo:
-        "O concílio definiu que a Páscoa não deveria coincidir com a Páscoa judaica, buscando unidade litúrgica.",
-    },
-    regras: {
-      titulo: "Regras disciplinares da Igreja",
-      conteudo:
-        "Foram estabelecidas normas sobre clero, disciplina e organização eclesiástica.",
-    },
-  };
-
-  const secaoAtiva = searchParams.secao
-    ? secoes[searchParams.secao]
-    : null;
-
   return (
-    <article className="max-w-3xl mx-auto p-8 space-y-8">
-      {/* Cabeçalho */}
+    <article className="max-w-3xl mx-auto p-8 space-y-6">
       <header>
         <h1 className="text-3xl font-bold">{concilio.nome}</h1>
-        <p className="text-gray-600">
-          {concilio.ano} — {concilio.local}
-        </p>
+        <p className="text-gray-600">{concilio.ano}</p>
       </header>
 
-      {/* Seção dinâmica */}
-      {secaoAtiva ? (
-        <section className="rounded-xl border border-zinc-200 bg-white p-6 shadow-sm">
-          <h2 className="text-2xl font-semibold mb-4">
-            {secaoAtiva.titulo}
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            {secaoAtiva.conteudo}
-          </p>
-        </section>
-      ) : (
-        <>
-          <section>
-            <p>{concilio.resumo}</p>
-          </section>
+      <section>
+        <h2 className="text-xl font-semibold mb-2">
+          Temas abordados
+        </h2>
 
-          <section>
-            <h2 className="text-xl font-bold mb-2">
-              Contexto histórico
-            </h2>
-            <p>{concilio.contexto}</p>
-          </section>
-        </>
-      )}
+        <ul className="space-y-2">
+          {concilio.temasAbordados.map((tema) => {
+            const temaSlug = slugify(tema);
+
+            return (
+              <li key={temaSlug}>
+                <Link
+                  href={`/concilios/${concilio.slug}/${temaSlug}`}
+                  className="text-blue-600 hover:underline"
+                >
+                  {tema}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
     </article>
   );
 }
