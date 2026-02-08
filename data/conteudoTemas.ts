@@ -23,7 +23,7 @@ export const conteudoTemas: Record<string, ConteudoTema> = {
       "por meio de quem todas as coisas vieram a existir."
     ],
     referencias: [
-      "João 1:1",
+      "Concílio de Niceia I (325). Símbolo Niceno: afirmação da divindade do Filho.",
       "In: TANNER, Norman P., SJ (ed.). Decrees of the Ecumenical Councils. Vol. 1: Nicaea I to Lateran V."
     ]
   },
@@ -31,12 +31,18 @@ export const conteudoTemas: Record<string, ConteudoTema> = {
   "combate-ao-arianismo": {
     titulo: "Combate ao Arianismo",
     texto: [
-      "O Concílio de Niceia (325) afirmou de maneira definitiva que Jesus Cristo é verdadeiro Deus, consubstancial ao Pai.",
-      "Essa declaração respondeu diretamente ao arianismo, que ensinava que o Filho era uma criatura exaltada, mas não eterno.",
-      "A formulação do Credo Niceno tornou-se um marco fundamental da ortodoxia cristã."
+      "O Concílio de Niceia (325) combateu o arianismo por meio da formulação do Credo Niceno e de seus anátemas finais. O concílio condenou explicitamente as proposições segundo as quais o Filho de Deus teria tido um início no tempo, teria sido criado a partir do nada, seria de substância diferente do Pai ou estaria sujeito a mudança. Tais posições foram formalmente rejeitadas e anatematizadas pela Igreja católica e apostólica, afirmando-se, em contraste, a plena divindade e eternidade do Filho.",
+      "Os anátemas contra o arianismo fazem parte do Credo Niceno original de 325 e não aparecem na forma posterior do Credo Niceno-Constantinopolitano (381).",
+      "Quanto àqueles que dizem:",
+      "‘Houve um tempo em que ele não existia’,",
+      "e: ‘Antes de ser gerado, ele não existia’,",
+      "e que afirmam que ele veio à existência a partir do nada,",
+      "ou que sustentam que o Filho de Deus é de outra hipóstase ou substância,",
+      "ou que está sujeito a alteração ou mudança —",
+      "a Igreja católica e apostólica os anatematiza."
     ],
     referencias: [
-      "João 1:1",
+      "Concílio de Niceia I (325). Símbolo Niceno: Anátemas contra o arianismo.",
       "In: TANNER, Norman P., SJ (ed.). Decrees of the Ecumenical Councils. Vol. 1: Nicaea I to Lateran V."
     ]
   },
