@@ -544,5 +544,104 @@ export const conteudoTemas: Record<string, ConteudoTema> = {
       "In: TANNER, Norman P., SJ (ed.). Decrees of the Ecumenical Councils. Vol. 1: Nicaea I to Lateran V."
     ]
   }
+  ,
+
+  "trindade": {
+    titulo: "Trindade",
+    texto: [
+      "A doutrina da Trindade afirma que Deus existe eternamente como três Pessoas distintas — Pai, Filho e Espírito Santo — que compartilham uma única substância divina.",
+      "A formulação clássica desenvolvida nos concílios de Niceia e Constantinopla protegeu tanto a unidade absoluta de Deus quanto a distinção pessoal interna entre as Pessoas divinas.",
+      "Termos como ‘consubstancial’ (homoousios) e conceitos como pericorese/coinheresão expressam como as Pessoas divinas se relacionam sem confundir ou separar as hipóstases."
+    ],
+    referencias: ["Concílio de Niceia I (325)", "Concílio de Constantinopla I (381)"]
+  },
+
+  "natureza-de-deus": {
+    titulo: "Natureza de Deus",
+    texto: [
+      "Refere-se aos atributos divinos (onipotência, onisciência, onipresença, eternidade, imutabilidade) e à unidade essencial de Deus.",
+      "A teologia sistemática trata de como esses atributos são compatibilizados com a relação trinitária e com a ação de Deus no mundo.",
+    ]
+  },
+
+  "pessoas-da-trindade": {
+    titulo: "Pessoas da Trindade",
+    texto: [
+      "Investiga a distinção pessoal entre Pai, Filho e Espírito: como cada Pessoa se relaciona na economia da salvação e na eternidade divina.",
+      "A cristologia e a pneumatologia estão intrinsecamente ligadas à compreensão correta das Pessoas divinas."
+    ]
+  },
+
+  "perichorese": {
+    titulo: "Perichorese",
+    texto: [
+      "Perichorese (ou coinheresão) descreve a íntima interpenetração das Pessoas da Trindade sem perda de identidade pessoal.",
+      "É um termo teológico que ajuda a explicar a comunhão intra-divina que torna possível a ação conjunta de Deus na criação e redenção."
+    ]
+  },
+
+  "cristologia": {
+    titulo: "Cristologia",
+    texto: [
+      "Cristologia é o estudo da pessoa e obra de Jesus Cristo: sua divindade, humanidade e os modos como essas duas naturezas se relacionam.",
+      "Os concílios cristológicos (Éfeso, Calcedônia) definiram termos essenciais como a união hipostática para preservar a plena divindade e plena humanidade de Cristo."
+    ]
+  },
+
+  "duas-naturezas-em-cristo": {
+    titulo: "Duas naturezas em Cristo",
+    texto: [
+      "A doutrina da união hipostática sustenta que em Jesus Cristo há duas naturezas (divina e humana) unidas em uma só pessoa (hipóstase), sem mistura ou confusão.",
+      "Calcedônia (451) foi decisiva ao afirmar que Cristo é reconhecido em duas naturezas, inseparavelmente unidas."
+    ]
+  },
+
+  "justificacao": {
+    titulo: "Justificação",
+    texto: [
+      "Justificação é o ato soberano de Deus pelo qual o pecador é declarado justo com base na obra de Cristo e recebida pela fé.",
+      "É um tema central na teologia protestante e também debatido em diálogos ecumênicos com a tradição católica sobre fé, obras e graça."
+    ]
+  },
+
+  "regeneracao": {
+    titulo: "Regeneração",
+    texto: [
+      "Regeneração (novo nascimento) é a obra do Espírito que transforma a mente e a vontade do crente, tornando-o apto para a fé e a santidade.",
+      "É frequentemente distinguida da justificação (posição legal diante de Deus) e da santificação (processo de crescimento)."
+    ]
+  },
+
+  "arrependimento": {
+    titulo: "Arrependimento",
+    texto: [
+      "Arrependimento é mudança de mente e de comportamento em relação ao pecado e orientação renovada para Deus; é parte essencial da resposta humana ao evangelho.",
+      "Na tradição bíblica, arrependimento é acompanhado por fé e frutos de arrependimento."
+    ]
+  },
+
+  "graca": {
+    titulo: "Graça",
+    texto: [
+      "Graça é o favor imerecido de Deus que possibilita a salvação; inclui iniciativas divinas como eleição, regeneração e sustentação espiritual.",
+      "Diferentes tradições enfatizam aspectos distintos: graça como graça soberana (calvinismo) ou graça habilitadora cooperativa (arminianismo)."
+    ]
+  },
+
+  "predestinacao": {
+    titulo: "Predestinação",
+    texto: [
+      "Predestinação trata da relação entre a soberania divina e a eleição das pessoas para salvação — tema com debates históricos intensos entre escolas teológicas.",
+      "Textos bíblicos e leituras sistemáticas geraram posições diversas; a teologia procura articular justiça divina e responsabilidade humana."
+    ]
+  },
+
+  "meios-de-graca": {
+    titulo: "Meios de graça",
+    texto: [
+      "Refere-se aos instrumentos por meio dos quais Deus comunica sua graça (Palavra, sacramentos, oração, disciplina eclesial).",
+      "Diferentes tradições apostam mais ou menos ênfase nos sacramentos visíveis como canais eficazes da graça."
+    ]
+  }
 };
 
