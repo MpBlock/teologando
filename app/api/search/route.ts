@@ -1,3 +1,4 @@
+import { concilios } from "@/data/concilios";
 
 
 export async function GET(request: Request) {
