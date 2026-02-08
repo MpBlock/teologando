@@ -8,9 +8,19 @@ export const conteudoTemas: Record<string, ConteudoTema> = {
   "divindade-de-cristo": {
     titulo: "Divindade de Cristo",
     texto: [
-      "O Concílio de Niceia (325) afirmou de maneira definitiva que Jesus Cristo é verdadeiro Deus, consubstancial ao Pai.",
-      "Essa declaração respondeu diretamente ao arianismo, que ensinava que o Filho era uma criatura exaltada, mas não eterno.",
-      "A formulação do Credo Niceno tornou-se um marco fundamental da ortodoxia cristã."
+      "O Concílio de Niceia (325) afirmou explicitamente a plena divindade de Jesus Cristo no Símbolo Niceno. O Filho é confessado como “Deus de Deus, Luz da Luz, Deus verdadeiro de Deus verdadeiro”, “gerado, não criado” e “consubstancial ao Pai”, por meio de quem todas as coisas vieram a existir. Com essas formulações, o concílio definiu dogmaticamente que o Filho possui a mesma substância do Pai e é verdadeiro Deus.",
+      "Esta definição dogmática foi formulada em resposta direta às teses arianas, que negavam a plena divindade e eternidade do Filho.",
+      "E em um só Senhor Jesus Cristo,",
+      "o Filho de Deus,",
+      "gerado do Pai,",
+      "unigênito,",
+      "isto é, da substância do Pai,",
+      "Deus de Deus,",
+      "Luz da Luz,",
+      "Deus verdadeiro de Deus verdadeiro,",
+      "gerado, não criado,",
+      "consubstancial ao Pai,",
+      "por meio de quem todas as coisas vieram a existir."
     ],
     referencias: [
       "João 1:1",
