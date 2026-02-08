@@ -643,5 +643,66 @@ export const conteudoTemas: Record<string, ConteudoTema> = {
       "Diferentes tradições apostam mais ou menos ênfase nos sacramentos visíveis como canais eficazes da graça."
     ]
   }
+  ,
+
+  "hamartiologia": {
+    titulo: "Hamartiologia (doutrina do pecado)",
+    texto: [
+      "Hamartiologia estuda a origem, natureza e consequências do pecado humano, incluindo o pecado original e suas implicações para a condição humana.",
+      "Tradições cristãs debatem sobre a transmissão do pecado original, a responsabilidade pessoal e a incapacidade humana de escolher o bem sem a iniciativa da graça divina.",
+      "O estudo inclui tanto dimensões bíblicas (texto e exegese) quanto patrísticas e teológicas sistemáticas posteriores."
+    ],
+    referencias: [
+      "Gênesis 3; Romanos 3–5 (paulinas sobre pecado e justificação)",
+      "Agostinho, " + "Confissões" ,
+      "John Calvin, Institutes of the Christian Religion (Livro II: sobre a corrupção do gênero humano)",
+      "Wayne Grudem, Systematic Theology (cap. sobre pecado)",
+    ]
+  },
+
+  "antropologia": {
+    titulo: "Antropologia Teológica (doutrina do ser humano)",
+    texto: [
+      "Antropologia teológica investiga a criação do ser humano à imagem de Deus (Imago Dei), sua dignidade, liberdade e queda.",
+      "Questões centrais incluem: o que significa ser feito à imagem de Deus, a relação corpo-alma, e a condição pós-queda sob pecado e necessidade de redenção.",
+      "O diálogo entre Escritura, patrística e teologia sistemática informa a compreensão das facetas pessoais e comunitárias do ser humano."
+    ],
+    referencias: [
+      "Gênesis 1–3 (Imago Dei e Queda)",
+      "Augustine, On the Soul and Its Origin (obras patrísticas relevantes)",
+      "Millard J. Erickson, Christian Theology (seção de antropologia)",
+      "Stanley J. Grenz, Theology for the Community of God (cap. sobre antropologia)",
+    ]
+  },
+
+  "hermeneutica": {
+    titulo: "Hermenêutica Bíblica",
+    texto: [
+      "Hermenêutica trata dos princípios e métodos para interpretar a Escritura de modo fiel ao contexto histórico, literário e teológico.",
+      "Inclui práticas exegéticas (análise de texto, língua original, contexto histórico) e a aplicação teológica responsável à vida da igreja e do indivíduo.",
+      "Distingue-se entre níveis de leitura: literal (face-value), tipológico, alegórico e teológico, sempre com atenção à intenção autoral e canônica."
+    ],
+    referencias: [
+      "Gordon D. Fee & Douglas Stuart, How to Read the Bible for All Its Worth",
+      "D.A. Carson, Exegetical Fallacies",
+      "Kevin J. Vanhoozer, Is There a Meaning in This Text? The Bible, the Reader, and the Morality of Literary Knowledge",
+      "Robert H. Stein, Interpreting the Parables"
+    ]
+  },
+
+  "missiologia": {
+    titulo: "Missiologia",
+    texto: [
+      "Missiologia investiga a missão da Igreja no mundo: a proclamação do evangelho, o discipulado e as implicações culturais do envio missionário.",
+      "Analisa contextos históricos de expansão cristã, teologias da missão e práticas missionárias em contextos plurais e pós-coloniais.",
+      "Inclui debates sobre enculturação, diálogo inter-religioso, justiça social e métodos de evangelização contextualizados."
+    ],
+    referencias: [
+      "David J. Bosch, Transforming Mission: Paradigm Shifts in Theology of Mission",
+      "Lesslie Newbigin, The Gospel in a Pluralist Society",
+      "Andrew F. Walls, The Missionary Movement in Christian History",
+      "Samuel Escobar, The Good News of the Kingdom: Mission Theology for the Third Millennium"
+    ]
+  }
 };
 

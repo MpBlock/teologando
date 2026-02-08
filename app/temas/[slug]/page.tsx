@@ -1,7 +1,16 @@
 import { temas } from "@/data/temas";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 type Props = { params: { slug: string } };
+
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
 
 export default function TemaPage({ params }: Props) {
   const tema = temas.find(t => t.slug === params.slug);
@@ -17,12 +26,16 @@ export default function TemaPage({ params }: Props) {
       <section>
         <h2 className="text-xl font-semibold mb-2">Tópicos</h2>
         <ul className="space-y-2">
-          {tema.temasAbordados.map((t) => (
-            <li key={t} className="text-blue-600 hover:underline">
-              {/* link para página do tópico */}
-              <a href={`/temas/${tema.slug}/${t.toLowerCase().replace(/[^a-z0-9]+/gi, "-")}`}>{t}</a>
-            </li>
-          ))}
+          {tema.temasAbordados.map((t) => {
+            const temaSlug = slugify(t);
+            return (
+              <li key={temaSlug}>
+                <Link href={`/temas/${tema.slug}/${temaSlug}`} className="text-blue-600 hover:underline">
+                  {t}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </section>
     </article>
