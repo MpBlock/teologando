@@ -141,12 +141,11 @@ export const conteudoTemas: Record<string, ConteudoTema> = {
   "data-da-pascoa": {
     titulo: "Data da Páscoa",
     texto: [
-      "O Concílio de Niceia também tratou da unificação da data da celebração da Páscoa, visando preservar a unidade da Igreja.",
-      "Decidiu-se que a Páscoa deveria ser celebrada no primeiro domingo após a primeira lua cheia depois do equinócio da primavera.",
-      "Essa decisão buscava evitar divergências litúrgicas entre as igrejas."
+      "A decisão sobre a Páscoa é conhecida por meio da carta do imperador Constantino preservada nas fontes históricas do concílio, e não por um cânone conciliar formal que tenha sobrevivido.",
+      "Também foi decidido, a respeito da santíssima festa da Páscoa, que ela fosse celebrada por todos em um único e mesmo dia. Pois foi considerado impróprio que, na celebração desta festa tão santa, seguíssemos o costume dos judeus, que impiamente mancharam as suas mãos com um pecado enorme e que, por isso, estão justamente afligidos por uma cegueira de alma. Não tenhamos, portanto, nada em comum com a detestável multidão judaica, pois recebemos de nosso Salvador um caminho diferente. Uma prática verdadeiramente legítima e apropriada nos foi transmitida desde o princípio, e devemos segui-la em unidade. Portanto, todos os nossos irmãos do Oriente, que anteriormente seguiam o costume dos judeus, doravante deverão celebrar a santa festa da Páscoa ao mesmo tempo que os romanos, os alexandrinos e todos os demais."
     ],
     referencias: [
-      "Cânones do Concílio de Niceia",
+      "CONSTANTINO I. Carta sobre a data da Páscoa (325).",
       "In: TANNER, Norman P., SJ (ed.). Decrees of the Ecumenical Councils. Vol. 1: Nicaea I to Lateran V."
     ]
   }
