@@ -29,10 +29,6 @@
   }
 }
 
-* {
-  transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border-color 150ms ease-in-out;
-}
-
 html {
   scroll-behavior: smooth;
 }

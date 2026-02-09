@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ShareButtons from "./ShareButtons";
 
 type Props = {
   heresia: {
@@ -23,10 +24,10 @@ function slugify(text: string) {
 
 export default function HeresiaModal({ heresia, onClose }: Props) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 dark:bg-black/60 backdrop-blur-sm">
-      <div className="w-full max-w-md rounded-2xl bg-white text-zinc-900 shadow-xl dark:bg-zinc-900 dark:text-zinc-100">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 dark:bg-black/60 backdrop-blur-sm p-4">
+      <div className="w-full max-w-md rounded-2xl bg-white text-zinc-900 shadow-xl dark:bg-zinc-900 dark:text-zinc-100 max-h-[90vh] overflow-y-auto">
 
-        <div className="flex items-center justify-between border-b border-gray-200 dark:border-zinc-700 px-6 py-4">
+        <div className="flex items-center justify-between border-b border-gray-200 dark:border-zinc-700 px-6 py-4 sticky top-0 bg-white dark:bg-zinc-900">
           <h2 className="text-xl font-semibold">
             {heresia.nome}
             <span className="ml-2 text-sm text-gray-500 dark:text-zinc-400">({heresia.periodo})</span>
@@ -35,7 +36,16 @@ export default function HeresiaModal({ heresia, onClose }: Props) {
           <button onClick={onClose} className="text-gray-500 hover:text-black dark:text-zinc-400 dark:hover:text-white transition">✕</button>
         </div>
 
-        <div className="p-6 space-y-2">
+        {/* Compartilhamento */}
+        <div className="px-6 pt-6">
+          <ShareButtons 
+            titulo={heresia.nome}
+            textoCustomizado={`Conheça a ${heresia.nome} em Teologando`}
+          />
+        </div>
+
+        <div className="px-6 py-4 space-y-2">
+          <p className="text-sm text-gray-600 dark:text-zinc-400 mb-4">Temas abordados:</p>
           {heresia.temasAbordados.map((tema) => {
             const temaSlug = slugify(tema);
 
@@ -56,7 +66,7 @@ export default function HeresiaModal({ heresia, onClose }: Props) {
           </Link>
         </div>
 
-        <div className="border-t border-gray-200 dark:border-zinc-700 px-6 py-3 text-right">
+        <div className="border-t border-gray-200 dark:border-zinc-700 px-6 py-3 text-right sticky bottom-0 bg-white dark:bg-zinc-900">
           <button onClick={onClose} className="text-sm text-gray-600 hover:text-black dark:text-zinc-400 dark:hover:text-zinc-200 transition">Fechar</button>
         </div>
       </div>
