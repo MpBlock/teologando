@@ -2,11 +2,19 @@
 
 import { useState, useMemo } from "react";
 import { heresias } from "@/data/heresias";
+import { heresiasDetalhadas } from "@/data/heresiasDetalhadas";
 import HeresiaModal from "@/components/HeresiaModal";
 import Filters from "@/components/Filters";
 
+type HeresiaSelecionada = (typeof heresias)[0] & {
+  descricao?: string;
+  paisDaIgreja?: Array<{ nome: string; citacao: string; contexto: string }>;
+  concilios?: Array<{ nome: string; decisao: string; consequencia: string }>;
+  evidenciasBiblicas?: string[];
+};
+
 export default function HeresiasPageContent() {
-  const [heresiaSelecionada, setHeresiaSelecionada] = useState<(typeof heresias)[0] | null>(null);
+  const [heresiaSelecionada, setHeresiaSelecionada] = useState<HeresiaSelecionada | null>(null);
   const [filtrosPeriodo, setFiltrosPeriodo] = useState<string[]>([]);
   const [busca, setBusca] = useState("");
 
@@ -44,7 +52,18 @@ export default function HeresiasPageContent() {
 
   function abrirPopup(slug: string) {
     const h = heresias.find(h => h.slug === slug);
-    if (h) setHeresiaSelecionada(h);
+    const hDetalhada = heresiasDetalhadas.find(hd => hd.slug === slug);
+    
+    if (h) {
+      const heresiaMerged = {
+        ...h,
+        descricao: hDetalhada?.descricao || h.temasAbordados.join(", "),
+        paisDaIgreja: hDetalhada?.paisDaIgreja,
+        concilios: hDetalhada?.concilios,
+        evidenciasBiblicas: hDetalhada?.evidenciasBiblicas,
+      };
+      setHeresiaSelecionada(heresiaMerged);
+    }
   }
 
   return (
