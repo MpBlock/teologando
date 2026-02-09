@@ -423,3 +423,171 @@ export const apologeticaDetalhada = [
     ],
   },
 ];
+
+// Detalhes marianos adicionados
+apologeticaDetalhada.push(
+  {
+    id: 10,
+    slug: "assuncao-maria",
+    nome: "Assunção de Maria",
+    descricao: "A doutrina da Assunção afirma que Maria foi elevada corporalmente ao céu. Aqui compilamos objeções protestantes, testemunhos patrísticos relevantes e a história da sua dogmatização.",
+    temasAbordados: [
+      "Data e natureza da Assunção",
+      "Testemunho patrístico",
+      "Dogmatização moderna",
+    ],
+    paisDaIgreja: [
+      {
+        nome: "Jerônimo",
+        citacao: "Não encontrei nos escritos apostólicos prova de que Maria tenha sido tomada corporalmente ao céu",
+        contexto: "Reconhecia honra a Maria, mas não afirmação clara da Assunção como dogma",
+      },
+      {
+        nome: "Agostinho",
+        citacao: "A Escritura ensina ressurreição em Cristo; a ideia de assunção pública não é tratada nos concílios antigos",
+        contexto: "Comentários patrísticos mostram suspeita sobre qualquer privilégio corporal exclusivo",
+      },
+      {
+        nome: "Festo do século V (coletânea patrística)",
+        citacao: "Algumas tradições tardias falam de honra especial, não de assunção dogmática",
+        contexto: "Tradições locais existiam, mas sem consenso universal",
+      },
+    ],
+    concilios: [
+      {
+        nome: "Concílios locais medievais",
+        decisao: "Várias sínodos locais aceitaram festas relativas à Assunção",
+        consequencia: "Prática litúrgica desenvolveu-se sem definição universal antiga",
+      },
+      {
+        nome: "Pio XII (1950) - Munificentissimus Deus",
+        decisao: "Dogmatizou a Assunção de Maria como dogma católico",
+        consequencia: "Doutrina oficialmente definida muito tarde na história da Igreja",
+      },
+    ],
+    evidenciasBiblicas: [
+      "Nenhuma passagem bíblica explícita; argumentos usados são tipológicos e por tradição",
+      "Interpretações de Apocalipse 12 são frequentemente citadas, mas são disputadas",
+    ],
+  },
+
+  {
+    id: 11,
+    slug: "imaculada-conceicao",
+    nome: "Imaculada Conceição",
+    descricao: "A Imaculada Conceição sustenta que Maria foi concebida sem pecado original. Aqui constam argumentos contrários, posições patrísticas e o contexto histórico da declaração dogmática.",
+    temasAbordados: [
+      "Natureza do pecado original",
+      "Desenvolvimento doutrinal",
+      "Interpretação patrística",
+    ],
+    paisDaIgreja: [
+      {
+        nome: "Agostinho",
+        citacao: "Todos necessitam da graça de Cristo para a salvação; não presumi que Maria fosse separada da condição humana caída",
+        contexto: "Ensinamentos agostinianos foram usados para criticar a Imaculada Conceição",
+      },
+      {
+        nome: "Jerônimo",
+        citacao: "Maria foi bendita entre as mulheres, mas isso não implica ausência de necessidade de redenção",
+        contexto: "Patrística valoriza Maria sem descrevê‑la como impecável desde a concepção",
+      },
+      {
+        nome: "Teólogos medievais (divergência)",
+        citacao: "Debate longo entre escolásticos sobre a preservação e a aplicação da graça",
+        contexto: "A definição formal só veio em 1854, após séculos de debate teológico",
+      },
+    ],
+    concilios: [
+      {
+        nome: "Définição papal de Pio IX (1854)",
+        decisao: "Imaculada Conceição declarada dogma em 1854",
+        consequencia: "Doutrina definida tardia e apontada pelos protestantes como desenvolvimento tardio",
+      },
+    ],
+    evidenciasBiblicas: [
+      "Romanos 3:23 e a ideia de universalidade do pecado",
+      "Lucas 1:47 ('minha alma engrandece ao Senhor') é citado como honra, não prova de isenção do pecado",
+    ],
+  },
+
+  {
+    id: 12,
+    slug: "virgindade-perpetua",
+    nome: "Virgindade Perpétua de Maria",
+    descricao: "A crença de que Maria permaneceu virgem antes, durante e após o parto. Aqui compilamos as posições bíblicas, patrísticas e as objeções protestantes.",
+    temasAbordados: [
+      "Interpretação dos 'irmãos de Jesus'",
+      "Testemunho patrístico sobre virgindade",
+      "Implicações teológicas",
+    ],
+    paisDaIgreja: [
+      {
+        nome: "Jerônimo",
+        citacao: "Defendeu a virgindade perpétua de Maria contra interpretações que liam 'irmãos' como parentes",
+        contexto: "Uma importante voz patrística a favor da virgindade perpétua",
+      },
+      {
+        nome: "Agostinho",
+        citacao: "Reconhecia tradição sobre a virgindade, mas não usou isso como base para outros privilégios",
+        contexto: "Mostrou cautela ao extrapolar doutrinas marianas",
+      },
+      {
+        nome: "Proto‑tradições" ,
+        citacao: "Textos apócrifos e devoções locais influenciaram a formação da crença",
+        contexto: "Muitas fontes tardias influenciaram a consolidação da ideia",
+      },
+    ],
+    concilios: [
+      {
+        nome: "Concílios locais e sínodos medievais",
+        decisao: "Promoveram festas e louvores à virgindade de Maria",
+        consequencia: "Transformaram a crença em prática litúrgica generalizada",
+      },
+    ],
+    evidenciasBiblicas: [
+      "Passagens que mencionam 'irmãos' de Jesus (Mt 13:55) são interpretadas de formas diferentes",
+      "Lucas 1 e a narrativa do nascimento sugerem virgindade no parto, mas não necessariamente perpétua",
+    ],
+  },
+
+  {
+    id: 13,
+    slug: "maternidade-divina",
+    nome: "Maternidade Divina (Theotokos)",
+    descricao: "O título Theotokos (Mãe de Deus) foi afirmado nos concílios cristológicos para proteger a verdadeira divindade de Cristo; aqui explicamos seu sentido teológico e os limites protestantes à devoção mariana.",
+    temasAbordados: [
+      "Significado cristológico de Theotokos",
+      "Concílio de Éfeso (431)",
+      "Diferença entre título cristológico e devoção mariana",
+    ],
+    paisDaIgreja: [
+      {
+        nome: "Cirilo de Alexandria",
+        citacao: "Chama Maria Theotokos para afirmar que o Filho é verdadeiramente Deus encarnado",
+        contexto: "Protegia a doutrina da união hipostática contra Nestório",
+      },
+      {
+        nome: "Nestório (pos-traço)",
+        citacao: "Apoiantes de Nestório evitaram o termo por temer conotações cosmológicas",
+        contexto: "Debate cristológico que levou a Éfeso",
+      },
+      {
+        nome: "Clemente e outros patrísticos",
+        citacao: "Reconheceram Maria como portadora de Cristo, com cuidado para não divinizá‑la",
+        contexto: "Uso patrístico do título para salvaguardar a cristologia",
+      },
+    ],
+    concilios: [
+      {
+        nome: "Concílio de Éfeso (431)",
+        decisao: "Afiançou o uso de Theotokos contra a posição nestoriana",
+        consequencia: "Protegeu a doutrina de Cristo como verdadeiramente Deus e homem",
+      },
+    ],
+    evidenciasBiblicas: [
+      "Lucas 1:43-47 (bendição de Isabel e Magnificat) — reconhece papel singular de Maria na encarnação",
+      "João 1:14 — 'o Verbo se fez carne' é a base cristológica que justifica o título Theotokos",
+    ],
+  }
+);
