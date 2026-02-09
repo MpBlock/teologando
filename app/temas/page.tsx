@@ -2,21 +2,24 @@ import TemasPageContent from "./TemasPageContent";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Temas da Teologia Cristã | Teologando",
+  title: "Apologética Protestante | Teologando",
   description:
-    "Explore os tópicos fundamentais da teologia cristã sistemática: Trindade, Cristologia, Salvação, Escatologia e muito mais.",
+    "Defesa protestante contra doutrinas católicas. Argumento bíblico e patrístico sobre: Sola Scriptura, Papado, Sacramentos, Transubstanciação, Tradição, Purgatório e mais.",
   keywords: [
-    "teologia sistemática",
-    "trindade",
-    "cristologia",
-    "salvação",
-    "soteriologia",
-    "escatologia",
+    "apologética protestante",
+    "sola scriptura",
+    "papado",
+    "sacramentos",
+    "transubstanciação",
+    "tradição",
+    "defesa protestante",
+    "anti-catolicismo",
+    "reforma protestante",
   ],
   openGraph: {
-    title: "Temas da Teologia Cristã | Teologando",
+    title: "Apologética Protestante | Teologando",
     description:
-      "Explore os tópicos fundamentais da teologia cristã sistemática.",
+      "Defesa protestante contra doutrinas católicas com base bíblica e nos Pais da Igreja.",
     url: "https://teologando.com/temas",
     type: "website",
   },

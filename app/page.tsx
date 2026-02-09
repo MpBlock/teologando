@@ -50,7 +50,7 @@ export default function Home() {
           <Card
             titulo="Apologética"
             descricao="Defenda a fé protestante contra erros católicos romanos com base bíblica e patrística"
-            link="/apologetica"
+            link="/temas"
           />
         </div>
       </section>
