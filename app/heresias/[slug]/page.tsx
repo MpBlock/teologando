@@ -13,8 +13,9 @@ function slugify(text: string) {
     .replace(/(^-|-$)/g, "");
 }
 
-export default function HeresiaPage({ params }: Props) {
-  const heresia = heresias.find(h => h.slug === params.slug);
+export default async function HeresiaPage({ params }: Props) {
+  const { slug } = await params;
+  const heresia = heresias.find(h => h.slug === slug);
   if (!heresia) notFound();
 
   return (

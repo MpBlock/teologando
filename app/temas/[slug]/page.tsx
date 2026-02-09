@@ -12,8 +12,9 @@ function slugify(text: string) {
     .replace(/(^-|-$)/g, "");
 }
 
-export default function TemaPage({ params }: Props) {
-  const tema = temas.find(t => t.slug === params.slug);
+export default async function TemaPage({ params }: Props) {
+  const { slug } = await params;
+  const tema = temas.find(t => t.slug === slug);
   if (!tema) notFound();
 
   return (

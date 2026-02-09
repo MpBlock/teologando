@@ -15,8 +15,9 @@ function slugify(text: string) {
     .replace(/(^-|-$)/g, "");
 }
 
-export default function ConcilioPage({ params }: Props) {
-  const concilio = concilios.find(c => c.slug === params.slug);
+export default async function ConcilioPage({ params }: Props) {
+  const { slug } = await params;
+  const concilio = concilios.find(c => c.slug === slug);
   if (!concilio) notFound();
 
   return (
