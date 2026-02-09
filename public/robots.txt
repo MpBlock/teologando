@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.next/
+Disallow: /public/
+
+Sitemap: https://teologando.com/sitemap.xml
+
+# Googlebot specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bingbot specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
