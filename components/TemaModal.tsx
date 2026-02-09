@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import ShareButtons from "./ShareButtons";
+import RelatedTopics from "./RelatedTopics";
+import { obterTopicosRelacionados } from "@/data/topicosRelacionados";
 
 type Props = {
   temaGroup: {
@@ -179,6 +181,9 @@ export default function TemaModal({ temaGroup, onClose }: Props) {
               ))}
             </div>
           )}
+
+          {/* Tópicos Relacionados */}
+          <RelatedTopics topics={obterTopicosRelacionados("temas", temaGroup.slug)} />
         </div>
 
         {/* Footer */}

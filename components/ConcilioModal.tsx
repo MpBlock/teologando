@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import ShareButtons from "./ShareButtons";
+import RelatedTopics from "./RelatedTopics";
+import { obterTopicosRelacionados } from "@/data/topicosRelacionados";
 
 type Props = {
   concilio: {
@@ -68,6 +70,11 @@ export default function ConcilioModal({ concilio, onClose }: Props) {
           <Link href={`/concilios/${concilio.slug}`} onClick={onClose} className="mt-4 inline-block text-sm text-blue-600 hover:underline dark:text-blue-400">
             Ver concílio completo →
           </Link>
+
+          {/* Tópicos Relacionados */}
+          <div className="mt-6">
+            <RelatedTopics topics={obterTopicosRelacionados("concilios", concilio.slug)} />
+          </div>
         </div>
 
         {/* Rodapé */}

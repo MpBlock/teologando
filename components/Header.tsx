@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -19,7 +20,7 @@ export default function Header() {
         </Link>
 
         {/* Menu Desktop */}
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex gap-8 items-center">
           <Link 
             href="/" 
             className="text-[var(--foreground)] hover:text-[var(--accent)] font-medium transition-colors"
@@ -44,18 +45,22 @@ export default function Header() {
           >
             Heresias
           </Link>
+          <ThemeToggle />
         </div>
 
         {/* Botão Menu Mobile */}
-        <button 
-          onClick={toggleMenu}
-          className="md:hidden p-2 hover:bg-[var(--border)] rounded-lg transition-colors"
-          aria-label="Menu"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <div className="md:hidden flex gap-2">
+          <ThemeToggle />
+          <button 
+            onClick={toggleMenu}
+            className="p-2 hover:bg-[var(--border)] rounded-lg transition-colors"
+            aria-label="Menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {/* Menu Mobile */}

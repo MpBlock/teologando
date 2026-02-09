@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import ShareButtons from "./ShareButtons";
+import RelatedTopics from "./RelatedTopics";
+import { obterTopicosRelacionados } from "@/data/topicosRelacionados";
 
 type Props = {
   heresia: {
@@ -176,6 +178,9 @@ export default function HeresiaModal({ heresia, onClose }: Props) {
               ))}
             </div>
           )}
+
+          {/* Tópicos Relacionados */}
+          <RelatedTopics topics={obterTopicosRelacionados("heresias", heresia.slug)} />
         </div>
 
         {/* Footer */}
