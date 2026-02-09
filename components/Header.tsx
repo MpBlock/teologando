@@ -33,10 +33,10 @@ export default function Header() {
             Concílios
           </Link>
           <Link 
-            href="/temas" 
+            href="/apologetica" 
             className="text-[var(--foreground)] hover:text-[var(--accent)] font-medium transition-colors"
           >
-            Temas
+            Apologética
           </Link>
           <Link 
             href="/heresias" 
@@ -76,11 +76,11 @@ export default function Header() {
             Concílios
           </Link>
           <Link 
-            href="/temas" 
+            href="/apologetica" 
             onClick={fecharMenu}
             className="block text-[var(--foreground)] hover:text-[var(--accent)] font-medium py-2 transition-colors"
           >
-            Temas
+            Apologética
           </Link>
           <Link 
             href="/heresias" 

@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { concilios } from "@/data/concilios";
 import { heresias } from "@/data/heresias";
-import { temas } from "@/data/temas";
+import { apologetica } from "@/data/apologetica";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://teologando.com";
@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/temas`,
+      url: `${baseUrl}/apologetica`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
@@ -50,13 +50,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Páginas de temas
-  const temasPages: MetadataRoute.Sitemap = temas.map((tema) => ({
-    url: `${baseUrl}/temas/${tema.slug}`,
+  // Páginas de apologética
+  const apologeticaPages: MetadataRoute.Sitemap = apologetica.map((item) => ({
+    url: `${baseUrl}/apologetica/${item.slug}`,
     lastModified: new Date(),
     changeFrequency: "yearly" as const,
     priority: 0.7,
   }));
 
-  return [...mainPages, ...conciliosPages, ...heresiasPages, ...temasPages];
+  return [...mainPages, ...conciliosPages, ...heresiasPages, ...apologeticaPages];
 }

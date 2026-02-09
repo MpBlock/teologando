@@ -48,9 +48,9 @@ export default function Home() {
             link="/heresias"
           />
           <Card
-            titulo="Temas"
-            descricao="Trindade, Cristologia, Salvação e outros tópicos fundamentais"
-            link="/temas"
+            titulo="Apologética"
+            descricao="Defenda a fé protestante contra erros católicos romanos com base bíblica e patrística"
+            link="/apologetica"
           />
         </div>
       </section>
