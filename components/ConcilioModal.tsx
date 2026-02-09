@@ -3,6 +3,7 @@
 import Link from "next/link";
 import ShareButtons from "./ShareButtons";
 import RelatedTopics from "./RelatedTopics";
+import CopiarCitacao from "./CopiarCitacao";
 import { obterTopicosRelacionados } from "@/data/topicosRelacionados";
 
 type Props = {
@@ -42,10 +43,15 @@ export default function ConcilioModal({ concilio, onClose }: Props) {
         </div>
 
         {/* Compartilhamento */}
-        <div className="px-6 pt-6">
+        <div className="px-6 pt-6 space-y-3">
           <ShareButtons 
             titulo={concilio.nome}
             textoCustomizado={`Saiba mais sobre o ${concilio.nome} em Teologando`}
+          />
+          <CopiarCitacao 
+            titulo={concilio.nome}
+            slug={concilio.slug}
+            categoria="concilios"
           />
         </div>
 

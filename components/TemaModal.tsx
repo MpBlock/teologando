@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ShareButtons from "./ShareButtons";
 import RelatedTopics from "./RelatedTopics";
+import CopiarCitacao from "./CopiarCitacao";
 import { obterTopicosRelacionados } from "@/data/topicosRelacionados";
 
 type Props = {
@@ -58,10 +59,15 @@ export default function TemaModal({ temaGroup, onClose }: Props) {
         </div>
 
         {/* Compartilhamento */}
-        <div className="px-6 pt-6">
+        <div className="px-6 pt-6 space-y-3">
           <ShareButtons 
             titulo={temaGroup.nome}
             textoCustomizado={`Defesa protestante contra ${temaGroup.nome}`}
+          />
+          <CopiarCitacao 
+            titulo={temaGroup.nome}
+            slug={temaGroup.slug}
+            categoria="temas"
           />
         </div>
 

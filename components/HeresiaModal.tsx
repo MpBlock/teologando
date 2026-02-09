@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ShareButtons from "./ShareButtons";
 import RelatedTopics from "./RelatedTopics";
+import CopiarCitacao from "./CopiarCitacao";
 import { obterTopicosRelacionados } from "@/data/topicosRelacionados";
 
 type Props = {
@@ -59,10 +60,15 @@ export default function HeresiaModal({ heresia, onClose }: Props) {
         </div>
 
         {/* Compartilhamento */}
-        <div className="px-6 pt-6">
+        <div className="px-6 pt-6 space-y-3">
           <ShareButtons 
             titulo={heresia.nome}
             textoCustomizado={`Entenda a heresia de ${heresia.nome} e sua condenação pela Igreja`}
+          />
+          <CopiarCitacao 
+            titulo={heresia.nome}
+            slug={heresia.slug}
+            categoria="heresias"
           />
         </div>
 

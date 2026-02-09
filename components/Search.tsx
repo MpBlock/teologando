@@ -7,19 +7,21 @@ type Resultado = {
   id: number;
   slug: string;
   nome: string;
-  ano: number;
-  tema: string;
-  resumo: string;
+  categoria: "concilios" | "heresias" | "temas";
+  temasAbordados: string[];
+  descricao?: string;
+  ano?: number;
+  periodo?: string;
+  link: string;
 };
-
-
 
 export default function Search() {
   const [query, setQuery] = useState("");
+  const [categoria, setCategoria] = useState("");
   const [resultados, setResultados] = useState<Resultado[]>([]);
   const [loading, setLoading] = useState(false);
 
-  async function buscar(valor: string) {
+  async function buscar(valor: string, cat: string = categoria) {
     setQuery(valor);
 
     if (!valor) {
@@ -28,19 +30,41 @@ export default function Search() {
     }
 
     setLoading(true);
-    const res = await fetch(`/api/search?q=${valor}`);
+    const params = new URLSearchParams({ q: valor });
+    if (cat) params.append("categoria", cat);
+    
+    const res = await fetch(`/api/search?${params}`);
     const data = await res.json();
     setResultados(data);
     setLoading(false);
   }
 
+  function handleFiltro(novaCategoria: string) {
+    setCategoria(novaCategoria);
+    buscar(query, novaCategoria);
+  }
+
+  const categoriaLabels = {
+    "": "Tudo",
+    "concilios": "Concílios",
+    "heresias": "Heresias",
+    "temas": "Apologética",
+  };
+
+  const categoriaColors = {
+    "concilios": "from-blue-500 to-blue-600",
+    "heresias": "from-red-500 to-red-600",
+    "temas": "from-purple-500 to-purple-600",
+  };
+
   return (
     <div className="max-w-2xl w-full">
+      {/* Input de Busca */}
       <div className="relative mb-6">
         <input
           type="text"
           placeholder="Buscar concílio, tema ou doutrina..."
-          className="w-full bg-[var(--card-bg)] border border-[var(--border)] rounded-xl px-5 py-4 text-[var(--foreground)] placeholder-[var(--muted)] focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] transition-all duraton-200"
+          className="w-full bg-[var(--card-bg)] border border-[var(--border)] rounded-xl px-5 py-4 text-[var(--foreground)] placeholder-[var(--muted)] focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)] transition-all duration-200"
           onChange={(e) => buscar(e.target.value)}
         />
         <svg
@@ -53,27 +77,56 @@ export default function Search() {
         </svg>
       </div>
 
+      {/* Filtros de Categoria */}
+      {query && (
+        <div className="flex gap-2 mb-6 flex-wrap">
+          {Object.entries(categoriaLabels).map(([key, label]) => (
+            <button
+              key={key}
+              onClick={() => handleFiltro(key)}
+              className={`px-3 py-1 text-sm font-medium rounded-full transition-all ${
+                categoria === key
+                  ? "bg-[var(--accent)] text-white"
+                  : "bg-[var(--border)] text-[var(--foreground)] hover:bg-[var(--accent)]/20"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
+
       {loading && (
         <p className="text-sm text-[var(--muted)] animate-pulse">Buscando...</p>
       )}
 
       <ul className="space-y-3">
-        {resultados.map((c) => (
+        {resultados.map((item) => (
           <li
-            key={c.id}
+            key={`${item.categoria}-${item.id}`}
             className="group bg-[var(--card-bg)] border border-[var(--border)] rounded-lg p-5 hover:border-[var(--accent)] hover:shadow-md transition-all duration-200"
           >
-            <Link href={`/concilios/${c.slug}`} className="block">
+            <Link href={item.link} className="block">
               <div className="flex items-start justify-between mb-2">
-                <strong className="text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">{c.nome}</strong>
-                <span className="text-xs font-medium text-[var(--accent)] bg-[var(--accent)] bg-opacity-10 px-3 py-1 rounded-full">
-                  {c.ano}
+                <strong className="text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">
+                  {item.nome}
+                </strong>
+                <span className={`text-xs font-medium text-white bg-gradient-to-r ${categoriaColors[item.categoria]} px-3 py-1 rounded-full`}>
+                  {categoriaLabels[item.categoria]}
                 </span>
               </div>
-              <p className="text-sm text-[var(--muted)] mb-2 leading-relaxed">{c.resumo}</p>
-              <span className="text-xs text-[var(--muted)] font-medium">
-                Tema: <span className="text-[var(--accent)]">{c.tema}</span>
-              </span>
+              {item.descricao && (
+                <p className="text-sm text-[var(--muted)] mb-2 leading-relaxed line-clamp-2">
+                  {item.descricao}
+                </p>
+              )}
+              <div className="flex flex-wrap gap-2">
+                {item.temasAbordados.slice(0, 3).map((tema, idx) => (
+                  <span key={idx} className="text-xs text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-1 rounded">
+                    {tema}
+                  </span>
+                ))}
+              </div>
             </Link>
           </li>
         ))}

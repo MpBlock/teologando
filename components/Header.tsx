@@ -45,6 +45,12 @@ export default function Header() {
           >
             Heresias
           </Link>
+          <Link 
+            href="/indice" 
+            className="text-[var(--foreground)] hover:text-[var(--accent)] font-medium transition-colors"
+          >
+            Índice
+          </Link>
           <ThemeToggle />
         </div>
 
@@ -93,6 +99,13 @@ export default function Header() {
             className="block text-[var(--foreground)] hover:text-[var(--accent)] font-medium py-2 transition-colors"
           >
             Heresias
+          </Link>
+          <Link 
+            href="/indice" 
+            onClick={fecharMenu}
+            className="block text-[var(--foreground)] hover:text-[var(--accent)] font-medium py-2 transition-colors"
+          >
+            Índice
           </Link>
         </div>
       )}
