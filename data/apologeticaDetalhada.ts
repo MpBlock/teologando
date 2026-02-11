@@ -11,6 +11,19 @@ export const apologeticaDetalhada = [
     ],
     paisDaIgreja: [
       {
+        nome: "Clemente de Roma (35 – 100)",
+        citacao: "Pedro, pela inveja injusta, suportou, não uma ou duas, mas muitas fadigas e, depois de ter prestado testemunho, foi para o lugar glorioso que lhe era devido (...) Por causa da inveja e da discórdia, Paulo mostrou o preço reservado à perseverança (...) deixou o mundo e se foi para o lugar santo, tornando-se o maior modelo de perseverança. A esses homens, que viveram santamente, ajuntou-se imensa multidão de eleitos que, devido à inveja, sofreram muitos ultrajes e torturas, e se tornaram entre nós belíssimo exemplo. (I Carta aos Coríntios 5-6)",
+        contexto: "Ele escreveu sobre vários cristãos como os apóstolos Paulo e Pedro, presbíteros e uma multidão de eleitos estando no céu, sem referência ao purgatório.", 
+      },
+      {
+        nome: "Inácio de Antioquia (35 – 100)",
+        citacao: "O príncipe deste mundo quer arrebatar-me e corromper o meu pensamento dirigido a Deus. Que ninguém dos que aí estão presentes o ajude. Antes, colocai-vos do meu lado, isto é, do lado de Deus. Não tenhais Jesus Cristo na boca, desejando, ao mesmo tempo, o mundo. Que a inveja não habite em vosso meio. Mesmo se eu estiver junto de vós e vos implorar, não vos deixeis persuadir. Persuada-vos aquilo que vos escrevo. É vivo que eu vos escrevo, mas com anseio de morrer. Meu desejo terrestre foi crucificado, e não há mais em mim fogo para amar a matéria. Dentro de mim, há uma água viva, que murmura e diz: “Vem para o Pai”. (Aos Romanos 7:1-2)",
+      },
+      {
+        nome: "Policarpo de Esmirna (69 – 155)",
+        citacao: "Portanto, eu vos exorto a todos, para que obedeçais à palavra da justiça e sejais constantes em toda a perseverança, que vistes com os próprios olhos, não só nos bem-aventurados Inácio, Zózimo e Rufo, mas ainda em outros que são do vosso meio, no próprio Paulo e nos demais apóstolos. Estejam persuadidos de que nenhum desses correu em vão, mas na fé e na justiça, e que eles estão no lugar que lhes é devido junto ao Senhor, com o qual sofreram. Eles não amaram este mundo, mas aquele que morreu por nós e que Deus ressuscitou para nós. (Epístola aos Filipenses 9)",
+      },
+      {
         nome: "Agostinho",
         citacao: "Nem todo homem é aperfeiçoado nesta vida, mas alguns morrem com deficiências espirituais",
         contexto: "Agostinho sugeria purificação, mas não definiu um lugar específico ou duração, deixando a doutrina aberta a interpretações",
