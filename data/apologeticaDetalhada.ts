@@ -18,25 +18,11 @@ export const apologeticaDetalhada = [
       {
         nome: "Inácio de Antioquia (35 – 100)",
         citacao: "O príncipe deste mundo quer arrebatar-me e corromper o meu pensamento dirigido a Deus. Que ninguém dos que aí estão presentes o ajude. Antes, colocai-vos do meu lado, isto é, do lado de Deus. Não tenhais Jesus Cristo na boca, desejando, ao mesmo tempo, o mundo. Que a inveja não habite em vosso meio. Mesmo se eu estiver junto de vós e vos implorar, não vos deixeis persuadir. Persuada-vos aquilo que vos escrevo. É vivo que eu vos escrevo, mas com anseio de morrer. Meu desejo terrestre foi crucificado, e não há mais em mim fogo para amar a matéria. Dentro de mim, há uma água viva, que murmura e diz: “Vem para o Pai”. (Aos Romanos 7:1-2)",
+        contexto: "Inácio exorta seus irmãos de Roma a não tentarem evitar o seu martírio. Seu desejo é morrer em Cristo, pois o que lhe espera é muito melhor do que o mundo presente.",
       },
       {
         nome: "Policarpo de Esmirna (69 – 155)",
         citacao: "Portanto, eu vos exorto a todos, para que obedeçais à palavra da justiça e sejais constantes em toda a perseverança, que vistes com os próprios olhos, não só nos bem-aventurados Inácio, Zózimo e Rufo, mas ainda em outros que são do vosso meio, no próprio Paulo e nos demais apóstolos. Estejam persuadidos de que nenhum desses correu em vão, mas na fé e na justiça, e que eles estão no lugar que lhes é devido junto ao Senhor, com o qual sofreram. Eles não amaram este mundo, mas aquele que morreu por nós e que Deus ressuscitou para nós. (Epístola aos Filipenses 9)",
-      },
-      {
-        nome: "Agostinho",
-        citacao: "Nem todo homem é aperfeiçoado nesta vida, mas alguns morrem com deficiências espirituais",
-        contexto: "Agostinho sugeria purificação, mas não definiu um lugar específico ou duração, deixando a doutrina aberta a interpretações",
-      },
-      {
-        nome: "Orígenes",
-        citacao: "Alguns necessitam de purificação pelo fogo depois da morte",
-        contexto: "Conceito primitivo diferente do Purgatório medieval católico; focava na progressão espiritual",
-      },
-      {
-        nome: "Jerônimo",
-        citacao: "Devemos orar pelos defuntos",
-        contexto: "Mencionou oração pelos mortos, mas não estabeleceu uma doutrina sistemática como o Catolicismo",
       },
     ],
     concilios: [
