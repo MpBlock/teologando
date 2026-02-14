@@ -272,11 +272,11 @@ export const apologeticaDetalhada = [
       },
     ],
     evidenciasBiblicas: [
-      "2 Timóteo 3:16-17: 'Toda Escritura é inspirada por Deus... para que o homem de Deus seja perfeito e perfeitamente aparelhado'",
-      "1 João 5:13: 'Estas coisas vos escrevi para que saibais' - a Escritura é suficiente",
-      "Gálatas 1:8-9: 'Ainda que um anjo... vos pregue evangelho diferente, seja anátema'",
-      "2 Pedro 1:20-21: 'Nenhuma profecia da Escritura é matéria de interpretação pessoal... homens santos falaram da parte de Deus'",
-      "Deuteronômio 4:2: 'Não acrescentes nada ao que vos mando... nem lhe tires coisa alguma'",
+      "2 Timóteo 3:16-17: 'Toda a Escritura é divinamente inspirada, e proveitosa para ensinar, para repreender, para corrigir, para instruir em justiça. ¹⁷ Para que o homem de Deus seja perfeito, e perfeitamente instruído para toda a boa obra.'",
+      "Gálatas 1:8-9: 'Mas, ainda que nós mesmos ou um anjo do céu vos anuncie outro evangelho além do que já vos tenho anunciado, seja anátema. ⁹ Assim, como já vo-lo dissemos, agora de novo também vo-lo digo. Se alguém vos anunciar outro evangelho além do que já recebestes, seja anátema.'",
+      "2 Pedro 1:20-21: 'Sabendo primeiramente isto: Que nenhuma profecia da Escritura é de particular interpretação. ²¹ Porque a profecia nunca foi produzida por vontade de homem algum, mas os homens santos de Deus falaram inspirados pelo Espírito Santo.'",
+      "Deuteronômio 4:2: 'Não acrescentareis à palavra que vos mando, nem diminuireis dela, para que guardeis os mandamentos do Senhor vosso Deus, que eu vos mando.'",
+      "1 Coríntios 4:6: 'E eu, irmãos, apliquei estas coisas, por semelhança, a mim e a Apolo, por amor de vós; para que em nós aprendais a não ir além do que está escrito, não vos ensoberbecendo a favor de um contra outro.'",
     ],
   },
   {
