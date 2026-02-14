@@ -106,34 +106,54 @@ export default function ConciliosPageContent() {
                 <button
                   key={concilio.slug}
                   onClick={() => abrirPopup(concilio.slug)}
-                  className="w-full text-left bg-[var(--card-bg)] border border-[var(--border)] rounded-xl p-5 hover:border-[var(--accent)] hover:shadow-lg transition-all group"
+                  className="w-full text-left relative bg-[var(--card-bg)] border border-[var(--border)] rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-2xl transition-all transform-gpu hover:-translate-y-0.5 group overflow-hidden"
                 >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-                    <div>
-                      <h3 className="font-semibold text-lg text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">
+                  <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-indigo-500 to-blue-400 rounded-l-xl" />
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 flex items-center justify-center text-white shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                          <path strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M12 2l3 6 6 .5-4.5 3 1.5 6L12 15l-6 3 1.5-6L3 8.5 9 8z" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-lg font-semibold text-[var(--foreground)] truncate group-hover:text-[var(--accent)] transition-colors">
                         {concilio.nome}
                       </h3>
                       <p className="text-sm text-[var(--muted)] mt-1">
                         {getPeriodo(concilio.ano).charAt(0).toUpperCase() + getPeriodo(concilio.ano).slice(1)} • {concilio.ano}
                       </p>
+
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {concilio.temasAbordados.slice(0, 3).map((tema, idx) => (
+                          <span key={idx} className="text-xs bg-[var(--border)]/60 text-[var(--muted)] px-2 py-1 rounded-full">
+                            {tema}
+                          </span>
+                        ))}
+                        {concilio.temasAbordados.length > 3 && (
+                          <span className="text-xs text-[var(--muted)] flex items-center gap-1">
+                            +{concilio.temasAbordados.length - 3} mais
+                          </span>
+                        )}
+                      </div>
                     </div>
-                    <div className="text-right">
-                      <span className="inline-block bg-[var(--accent)]/10 text-[var(--accent)] px-3 py-1 rounded-full text-xs font-medium">
-                        {concilio.temasAbordados.length} temas
-                      </span>
+
+                    <div className="ml-4 flex flex-col items-end justify-between">
+                      <div className="text-xs text-[var(--muted)]">Temas</div>
+                      <div className="mt-1 inline-flex items-center gap-2">
+                        <span className="inline-block bg-[var(--accent)]/10 text-[var(--accent)] px-3 py-1 rounded-full text-sm font-semibold">
+                          {concilio.temasAbordados.length}
+                        </span>
+                      </div>
+                      <div className="mt-3">
+                        <div className="px-3 py-1 bg-[var(--card-bg)] border border-[var(--border)] rounded-full text-xs text-[var(--muted)]">
+                          {concilio.ano}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {concilio.temasAbordados.slice(0, 3).map((tema, idx) => (
-                      <span key={idx} className="text-xs bg-[var(--border)] text-[var(--muted)] px-2 py-1 rounded">
-                        {tema}
-                      </span>
-                    ))}
-                    {concilio.temasAbordados.length > 3 && (
-                      <span className="text-xs text-[var(--muted)]">
-                        +{concilio.temasAbordados.length - 3} mais
-                      </span>
-                    )}
                   </div>
                 </button>
               ))}

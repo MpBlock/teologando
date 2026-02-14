@@ -43,7 +43,11 @@ export default function TemasPageContent() {
       const temaMerged = {
         ...t,
         descricao: tDetalhado?.descricao || t.temasAbordados.join(", "),
-        paisDaIgreja: tDetalhado?.paisDaIgreja,
+        paisDaIgreja: tDetalhado?.paisDaIgreja?.map(p => ({
+          nome: p.nome,
+          citacao: p.citacao,
+          contexto: p.contexto || "",
+        })),
         concilios: tDetalhado?.concilios,
         evidenciasBiblicas: tDetalhado?.evidenciasBiblicas,
       };
