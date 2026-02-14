@@ -251,7 +251,8 @@ export const apologeticaDetalhada = [
       },
       {
         nome: "Orígenes (185-254)",
-        citacao:"o que temos tirado da autoridade da Escritura deve ser suficiente para refutar os argumentos dos hereges. (De Principiis, Livro II, 5:3)."
+        citacao:"o que temos tirado da autoridade da Escritura deve ser suficiente para refutar os argumentos dos hereges. (De Principiis, Livro II, 5:3).",
+        contexto: " Orígenes reforçou o fato da suficiência das Escrituras",
       },
       {
         nome: "Agostinho (354-430)",
