@@ -5,6 +5,7 @@ import { heresias } from "@/data/heresias";
 import { heresiasDetalhadas } from "@/data/heresiasDetalhadas";
 import HeresiaModal from "@/components/HeresiaModal";
 import Filters from "@/components/Filters";
+import CommentsSection from "@/components/CommentsSection";
 
 type HeresiaSelecionada = (typeof heresias)[0] & {
   descricao?: string;
@@ -150,6 +151,12 @@ export default function HeresiasPageContent() {
       {heresiaSelecionada && (
         <HeresiaModal heresia={heresiaSelecionada} onClose={() => setHeresiaSelecionada(null)} />
       )}
+
+      <CommentsSection
+        contentId="heresias-main"
+        contentType="heresias"
+        contentTitle="Heresias Históricas"
+      />
     </main>
   );
 }

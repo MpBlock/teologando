@@ -5,6 +5,7 @@ import { temas } from "@/data/temas";
 import { apologeticaDetalhada } from "@/data/apologeticaDetalhada";
 import TemaModal from "@/components/TemaModal";
 import Filters from "@/components/Filters";
+import CommentsSection from "@/components/CommentsSection";
 
 type TemaSelecionado = (typeof temas)[0] & {
   descricao?: string;
@@ -137,6 +138,12 @@ export default function TemasPageContent() {
       </div>
 
       {selecionado && <TemaModal temaGroup={selecionado} onClose={() => setSelecionado(null)} />}
+
+      <CommentsSection
+        contentId="temas-main"
+        contentType="temas"
+        contentTitle="Apologética Protestante"
+      />
     </main>
   );
 }

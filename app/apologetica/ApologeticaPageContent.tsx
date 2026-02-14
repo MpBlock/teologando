@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import { apologetica } from "@/data/apologetica";
 import ApologeticaModal from "@/components/ApologeticaModal";
 import Filters from "@/components/Filters";
+import CommentsSection from "@/components/CommentsSection";
 
 export default function ApologeticaPageContent() {
   const [selecionado, setSelecionado] = useState<(typeof apologetica)[0] | null>(null);
@@ -119,6 +120,12 @@ export default function ApologeticaPageContent() {
       </div>
 
       {selecionado && <ApologeticaModal apologetica={selecionado} onClose={() => setSelecionado(null)} />}
+
+      <CommentsSection
+        contentId="apologetica-main"
+        contentType="heresias"
+        contentTitle="Apologética Cristã"
+      />
     </main>
   );
 }
