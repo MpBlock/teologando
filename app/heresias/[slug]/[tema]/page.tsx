@@ -1,6 +1,7 @@
 import { heresias } from "@/data/heresias";
 import { notFound } from "next/navigation";
 import { conteudoTemas } from "@/data/conteudoTemas";
+import CommentsSection from "@/components/CommentsSection";
 
 type Props = { params: Promise<{ slug: string; tema: string }> };
 
@@ -47,6 +48,12 @@ export default async function TemaPage({ params }: Props) {
           </ul>
         </section>
       )}
+
+      <CommentsSection
+        contentId={`${slug}-${tema}`}
+        contentType="heresias"
+        contentTitle={`${heresia.nome} - ${temaTexto}`}
+      />
     </article>
   );
 }

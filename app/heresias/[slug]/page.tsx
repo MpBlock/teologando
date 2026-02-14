@@ -1,6 +1,7 @@
 import { heresias } from "@/data/heresias";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import CommentsSection from "@/components/CommentsSection";
 
 type Props = { params: { slug: string } };
 
@@ -42,6 +43,12 @@ export default async function HeresiaPage({ params }: Props) {
           })}
         </ul>
       </section>
+
+      <CommentsSection
+        contentId={heresia.slug}
+        contentType="heresias"
+        contentTitle={heresia.nome}
+      />
     </article>
   );
 }

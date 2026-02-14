@@ -1,6 +1,7 @@
 import { temas } from "@/data/temas";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import CommentsSection from "@/components/CommentsSection";
 
 type Props = { params: { slug: string } };
 
@@ -39,6 +40,12 @@ export default async function TemaPage({ params }: Props) {
           })}
         </ul>
       </section>
+
+      <CommentsSection
+        contentId={tema.slug}
+        contentType="temas"
+        contentTitle={tema.nome}
+      />
     </article>
   );
 }

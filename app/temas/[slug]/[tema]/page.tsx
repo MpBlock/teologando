@@ -1,6 +1,7 @@
 import { temas } from "@/data/temas";
 import { notFound } from "next/navigation";
 import { conteudoTemas } from "@/data/conteudoTemas";
+import CommentsSection from "@/components/CommentsSection";
 
 type Props = { params: Promise<{ slug: string; tema: string }> };
 
@@ -38,6 +39,12 @@ export default async function TopicoPage({ params }: Props) {
           <p>Conteúdo em desenvolvimento para este tópico.</p>
         )}
       </section>
+
+      <CommentsSection
+        contentId={`${slug}-${tema}`}
+        contentType="temas"
+        contentTitle={`${temaGroup.nome} - ${temaTexto}`}
+      />
     </article>
   );
 }

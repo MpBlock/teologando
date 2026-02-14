@@ -1,6 +1,7 @@
 import { concilios } from "@/data/concilios";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import CommentsSection from "@/components/CommentsSection";
 
 type Props = {
   params: { slug: string };
@@ -49,6 +50,12 @@ export default async function ConcilioPage({ params }: Props) {
           })}
         </ul>
       </section>
+
+      <CommentsSection
+        contentId={concilio.slug}
+        contentType="concilios"
+        contentTitle={concilio.nome}
+      />
     </article>
   );
 }

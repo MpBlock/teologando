@@ -1,6 +1,7 @@
 import { concilios } from "@/data/concilios";
 import { notFound } from "next/navigation";
 import { conteudoTemas } from "@/data/conteudoTemas";
+import CommentsSection from "@/components/CommentsSection";
 
 
 type Props = {
@@ -94,6 +95,12 @@ export default async function TemaPage({ params }: Props) {
           </div>
         </aside>
       </div>
+
+      <CommentsSection
+        contentId={`${slug}-${tema}`}
+        contentType="concilios"
+        contentTitle={`${concilio.nome} - ${temaTexto}`}
+      />
     </article>
   );
 
