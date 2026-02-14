@@ -256,7 +256,7 @@ export const apologeticaDetalhada = [
       {
         nome: "Agostinho (354-430)",
         citacao: "Não faltam obras eclesiásticas – sem contar as Escrituras canônicas, salutarmente colocadas no ápice da autoridade – por cuja leitura um homem bem dotado pode penetrar, além de seu conteúdo, no estilo das mesmas.(A Doutrina Cristã, Livro IV – Sobre a maneira de ensinar a doutrina, 4.)",
-        contexto: "Reconhecia a Igreja, mas a Escritura era critério de verdade, não a Tradição paralela",
+        contexto: "Em nenhum lugar ele coloca uma tradição extra-bíblica em pé de igualdade com as Escrituras, mas sempre faz questão de ressaltar, assim como os reformadores fizeram, que a Bíblia é a autoridade suprema da fé",
       },
     ],
     concilios: [
