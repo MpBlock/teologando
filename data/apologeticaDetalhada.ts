@@ -245,19 +245,18 @@ export const apologeticaDetalhada = [
     ],
     paisDaIgreja: [
       {
-        nome: "Ireneu de Lyon",
-        citacao: "A Regra da Fé apostólica é preservada na Escritura; temos critério objetivo",
-        contexto: "Apelava à Escritura como disposição objetiva, não a tradição oral não-escrita",
+        nome: "Ireneu de Lyon (100-165)",
+        citacao: "De nada mais temos aprendido o plano de nossa salvação, senão daqueles através de quem o evangelho nos chegou, o qual eles pregaram inicialmente em público, e, em tempos mais recentes, pela vontade de Deus, nos foi legado por eles nas Escrituras, para que sejam o fundamento e pilar de nossa fé.(Contra as Heresias, Livro III, 1:1)",
+        contexto: "Irineu foi um dos mais enfáticos pregadores da Sola Scriptura no século II. Foi ele quem disse que as Escrituras são o pilar e o fundamento da nossa fé",
       },
       {
-        nome: "Agostinho",
-        citacao: "Não colocaria confiança no Evangelho se a autoridade da Igreja não me impelisse",
+        nome: "Orígenes (185-254)",
+        citacao:"o que temos tirado da autoridade da Escritura deve ser suficiente para refutar os argumentos dos hereges. (De Principiis, Livro II, 5:3)."
+      },
+      {
+        nome: "Agostinho (354-430)",
+        citacao: "Não faltam obras eclesiásticas – sem contar as Escrituras canônicas, salutarmente colocadas no ápice da autoridade – por cuja leitura um homem bem dotado pode penetrar, além de seu conteúdo, no estilo das mesmas.(A Doutrina Cristã, Livro IV – Sobre a maneira de ensinar a doutrina, 4.)",
         contexto: "Reconhecia a Igreja, mas a Escritura era critério de verdade, não a Tradição paralela",
-      },
-      {
-        nome: "Jerônimo",
-        citacao: "Sigamos a Escritura como bússola segura",
-        contexto: "Enfatizava Escritura como base objetiva da fé, não Tradição não-escrita",
       },
     ],
     concilios: [
