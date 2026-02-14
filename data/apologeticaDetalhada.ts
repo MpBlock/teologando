@@ -549,7 +549,6 @@ apologeticaDetalhada.push(
       "Lucas 1 e a narrativa do nascimento sugerem virgindade no parto, mas não necessariamente perpétua",
     ],
   },
-
   {
     id: 13,
     slug: "maternidade-divina",
@@ -585,8 +584,10 @@ apologeticaDetalhada.push(
       },
     ],
     evidenciasBiblicas: [
-      "Lucas 1:43-47 (bendição de Isabel e Magnificat) — reconhece papel singular de Maria na encarnação",
-      "João 1:14 — 'o Verbo se fez carne' é a base cristológica que justifica o título Theotokos",
+      "Mateus 1:16: 'E Jacó gerou a José, marido de Maria, da qual NASCEU JESUS, que se chama o Cristo.'",
+      "Filipenses 2:7: 'Mas fez a si mesmo de nenhuma reputação, tomando a forma de servo, fazendo-se semelhante aos homens'",
+      "1 Timóteo 2:5: 'Porque há um só Deus, e um só Mediador entre Deus e os homens, Jesus Cristo homem.'",
+      "João 1:14 — 'Aquele que é a Palavra tornou-se carne e viveu entre nós. Vimos a sua glória, glória como do Unigênito vindo do Pai, cheio de graça e de verdade",
     ],
   }
 );
